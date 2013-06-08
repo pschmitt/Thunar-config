@@ -1,0 +1,109 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1369297223744670-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Example for a custom action</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Root Terminal</name>
+	<unique-id>1370641301178156-1</unique-id>
+	<command>gksudo -- exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Open root terminal Here</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>clamtk</icon>
+	<name>Scan for virus</name>
+	<unique-id>1370644495610122-2</unique-id>
+	<command> clamtk %F </command>
+	<description>Scan using clamtk</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>media-optical-cd-audio-symbolic</icon>
+	<name>Mount ISO</name>
+	<unique-id>1370645013166910-2</unique-id>
+	<command>fuseiso -n -p %f /mnt/iso/%f.mount</command>
+	<description></description>
+	<patterns>*.iso;*.ISO;*.bin;*.BIN;*.nrg;*.NRG;*.mdf;*.MDF</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>media-optical-cd-audio-symbolic</icon>
+	<name>Unmount ISO</name>
+	<unique-id>1370644562963366-4</unique-id>
+	<command>fusermount -u %f</command>
+	<description></description>
+	<patterns>*.mount</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>libreoffice-oasis-text</icon>
+	<name>Convert to ODT</name>
+	<unique-id>1370685971040783-1</unique-id>
+	<command>unoconv -f odt %F</command>
+	<description></description>
+	<patterns>*.doc;*.docx;*.DOC;*.DOCX</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>application-pdf</icon>
+	<name>Export to PDF</name>
+	<unique-id>1370686164424329-3</unique-id>
+	<command>unoconv -f pdf %F</command>
+	<description></description>
+	<patterns>*.doc;*.docx;*.odt;*.odp;*.pps;*.ppt;*.xls;*.xlsx;*.ods;*.pptx;*.DOC;*.DOCX;*.ODT;*.ODP;*.PPS;*.PPT;*.XLS;*.XLSX;*.ODS;*.PPTX</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>object-rotate-right-symbolic</icon>
+	<name>Rotate 90°</name>
+	<unique-id>1370695605282001-8</unique-id>
+	<command>convert %F -rotate 90 %F</command>
+	<description>Rotate 90° (image)</description>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>object-rotate-left-symbolic</icon>
+	<name>Rotate -90°</name>
+	<unique-id>1370695610604843-9</unique-id>
+	<command>convert %F -rotate -90 %F</command>
+	<description>Rotate -90° (image)</description>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>object-rotate-right-symbolic</icon>
+	<name>Rotate 90°</name>
+	<unique-id>1370695768306970-16</unique-id>
+	<command>/home/pschmitt/bin/pdfrte -f 90 %f</command>
+	<description>Rotate 90° (PDF)</description>
+	<patterns>*.pdf;*.PDF</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>object-rotate-left-symbolic</icon>
+	<name>Rotate -90°</name>
+	<unique-id>1370695773683390-17</unique-id>
+	<command>/home/pschmitt/bin/pdfrte -f 90 %f</command>
+	<description>Rotate -90° (PDF)</description>
+	<patterns>*.pdf;*.PDF</patterns>
+	<other-files/>
+</action>
+</actions>
